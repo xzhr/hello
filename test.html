@@ -1,0 +1,333 @@
+<!-- <!DOCTYPE html>
+<html>
+<body>
+
+<h1>我的第一张网页</h1>
+
+<script>
+document.write("<p>我的第一段 JavaScript</p>");
+</script>
+
+</body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html>
+<body>
+
+<h1>我的第一张网页</h1>
+
+<p>我的第一个段落。</p>
+
+<button onclick="myFunction()">点击这里</button>
+
+<script>
+function myFunction()
+{
+document.write("糟糕！文档消失了。");
+}
+</script>
+
+</body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<script>
+function myFunction()
+{
+alert("Hello World!");
+}
+</script>
+</head>
+
+
+<body>
+<button onclick="myFunction()">点击这里</button>
+
+</body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html>
+<body>
+	<button onclick="myFunction('Bill Gates','CEO')">点击这里</button>
+	<button onclick="myFunction('Harry Potter','Wizard')">点击这里</button>
+	<button onclick="myFunction('Bob','Builder')">点击这里</button>
+
+	<script>
+	function myFunction(name,job)
+	{
+	alert("Welcome " + name + ", the " + job);
+	}
+	</script>
+</body>
+</html> -->
+
+
+<!-- <!DOCTYPE html>
+<html>
+<body>
+	<button onclick="myFunction(4,3)">点击这里</button>
+
+	<script>
+	function myFunction(a,b)
+	{
+	return a*b;
+	}
+
+	document.getElementById("demo").innerHTML=myFunction(4,3);
+	</script>
+</body>
+</html> -->
+
+
+<!-- <!DOCTYPE html>
+<html>
+<body>
+
+<script>
+cars=["BMW","Volvo","Saab","Ford"];
+var i=0,len=cars.length;
+for (; i<len; )
+{
+document.write(cars[i] + "<br>");
+i++;
+}
+</script>
+
+</body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html>
+<body>
+<p>点击下面的按钮，循环遍历对象 "person" 的属性。</p>
+<button onclick="myFunction()">点击这里</button>
+<p id="demo"></p>
+
+<script>
+function myFunction()
+{
+var x;
+var txt="";
+var person={fname:"Bill",lname:"Gates",age:56}; 
+
+for (x in person)
+	
+{
+
+txt=txt + person[x]+"</br>";
+}
+
+document.getElementById("demo").innerHTML=txt;
+}
+</script>
+</body>
+</html> -->
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<script>
+var txt="";
+function message()
+{
+try
+  {
+  adddlert("Welcome guest!");
+  }
+catch(err)
+  {
+  txt="There was an error on this page.\n\n";
+  txt+="Error description: " + err.message + "\n\n";
+  txt+="Click OK to continue.\n\n";
+  alert(txt);
+  }
+}
+</script>
+</head>
+
+<body>
+<input type="button" value="View message" onclick="message()">
+</body>
+
+</html> -->
+
+<!-- <html>
+<head>
+<script type="text/javascript">
+
+function validate_required(field,alerttxt)
+{
+with (field)
+  {
+  if (value==null||value=="")
+    {alert(alerttxt);return false}
+  else {return true}
+  }
+}
+
+function validate_form(thisform)
+{
+with (thisform)
+  {
+  if (validate_required(email,"Email must be filled out!")==false)
+    {email.focus();return false}
+  }
+}
+</script>
+</head>
+
+<body>
+<form action="submitpage.htm" onsubmit="return validate_form(this)" method="post">
+Email: <input type="text" name="email" size="30">
+<input type="submit" value="Submit"> 
+</form>
+</body>
+
+</html> -->
+
+<!-- <html>
+<head>
+<script type="text/javascript">
+function validate_email(field,alerttxt)
+{
+with (field)
+{
+apos=value.indexOf("@")
+dotpos=value.lastIndexOf(".")
+if (apos<1||dotpos-apos<2) 
+  {alert(alerttxt);return false}
+else {return true}
+}
+}
+
+function validate_form(thisform)
+{
+with (thisform)
+{
+if (validate_email(email,"Not a valid e-mail address!")==false)
+  {email.focus();return false}
+}
+}
+</script>
+</head>
+
+<body>
+<form action="submitpage.htm"onsubmit="return validate_form(this);" method="post">
+Email: <input type="text" name="email" size="30">
+<input type="submit" value="Submit"> 
+</form>
+</body>
+
+</html> -->
+
+
+<!-- <!DOCTYPE html>
+<html>
+<body>
+
+<div id="div1">
+<p id="p1">这是一个段落。</p>
+<p id="p2">这是另一个段落。</p>
+</div>
+
+<script>
+var para=document.createElement("p");
+var node=document.createTextNode("这是新段落。");
+para.appendChild(node);
+
+var element=document.getElementById("div1");
+element.appendChild(para);
+</script>
+
+</body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html>
+<body>
+
+<div id="div1">
+<p id="p1">这是一个段落。</p>
+<p id="p2">这是另一个段落。</p>
+</div>
+
+<script>
+var parent=document.getElementById("div1");
+var child=document.getElementById("p1");
+parent.removeChild(child);
+</script>
+
+</body>
+</html> -->
+
+<!-- <html>
+<body>
+
+<script type="text/javascript">
+
+document.write(Date())
+
+</script>
+
+</body>
+</html> -->
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js">
+</script>
+<script>
+function myFunction()
+{
+$("#h01").html("Hello jQuery")
+}
+$(document).ready(myFunction);
+</script>
+</head>
+
+<body>
+<h1 id="h01"></h1>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js">
+</script>
+<script>
+function myFunction()
+{
+$("#h01").attr("style","color:red").html("Hello jQuery")
+}
+$(document).ready(myFunction);
+</script>
+</head>
+
+<body>
+<h1 id="h01"></h1>
+</body>
+</html>
+
+
+for(var i=0;i<ulLen;i++){
+        _title_=$('#_title_'+i).text();
+        _orderNo_=$('#_orderNo_'+i).text();
+        _sku_=$('#_sku_'+i).text();
+        _content_=$('#_content_'+i).val();
+        var estimate=new Object();
+        estimate.productTitle=_title_;
+        estimate.sku=_sku_;
+        estimate.orderNo=_orderNo_;
+        estimate.content=_content_;
+        estimate.anon='0';
+        if(_content_!=''){
+          array[i]=estimate;
+        }
